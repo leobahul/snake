@@ -18,14 +18,23 @@
             margin: 5px;
         }
         .xyz{
-            align-items: center;
-            justify-content: center;
+            
             font-family: 'Arial', sans-serif;
             margin: auto;
             width: max-content;
+            background-color: antiquewhite;
         }
         table{
             margin: auto;
+            
+        }
+        .fa-solid{
+            font-size: 40px;
+            margin: 20px;
+          
+        }
+        button{
+            background-color: green;
         }
     </style>
 </head>
@@ -34,7 +43,7 @@
 
     <h1>Snake Game</h1>
     <p>Score: <span id="score">0</span></p>
-    <canvas id="snakeCanvas" width="400" height="400"></canvas>
+    <canvas id="snakeCanvas" width="350" height="350"></canvas>
 
 
 </div>
@@ -118,8 +127,8 @@
             if (
                 snakeX < -20 ||
                 snakeY < -20 ||
-                snakeX > 400 ||
-                snakeY > 400 ||
+                snakeX > canvas.width+10 ||
+                snakeY > canvas.height+10 ||
                 collision(newHead, snake)
             ) {
                 // reset the game
