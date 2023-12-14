@@ -39,7 +39,7 @@
 <body>
     <div class="xyz">
 
-    <h1>Snake Game</h1>
+    
     <p>Score: <span id="score">0</span></p>
     <canvas id="snakeCanvas" width="350" height="350"></canvas>
 
@@ -123,8 +123,8 @@
 
             // check for collision with walls or itself
             if (
-                snakeX < -20 ||
-                snakeY < -20 ||
+                snakeX < -10 ||
+                snakeY < -10 ||
                 snakeX > canvas.width+10 ||
                 snakeY > canvas.height+10 ||
                 collision(newHead, snake)
